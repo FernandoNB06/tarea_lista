@@ -7,19 +7,37 @@ function saludar() {
     
     // Obtener el género seleccionado
     var genero = document.getElementById("genero").value;
-    
-    // Generar el saludo basado en el género
+
+    // Obtener el idioma seleccionado
+    var idioma = document.getElementById("idioma").value;
+
+    // Variables para el saludo y mensaje de edad
     var saludoGenero;
-    if (genero === "masculino") {
-        saludoGenero = "Bienvenido";
-    } else if (genero === "femenino") {
-        saludoGenero = "Bienvenida";
-    } else {
-        saludoGenero = "Bienvenide"; // Inclusivo para otro género
+    var mensajeEdad;
+
+    // Configurar el saludo y el mensaje según el idioma
+    if (idioma === "es") {
+        if (genero === "masculino") {
+            saludoGenero = "Bienvenido";
+        } else if (genero === "femenino") {
+            saludoGenero = "Bienvenida";
+        } else {
+            saludoGenero = "Bienvenide";
+        }
+        mensajeEdad = "Tienes " + edad + " años.";
+    } else if (idioma === "en") {
+        if (genero === "masculino") {
+            saludoGenero = "Welcome";
+        } else if (genero === "femenino") {
+            saludoGenero = "Welcome";
+        } else {
+            saludoGenero = "Welcome";
+        }
+        mensajeEdad = "You are " + edad + " years old.";
     }
     
-    // Crear el mensaje de saludo con nombre, género y edad
-    var mensaje = saludoGenero + ", " + nombre + ". Tienes " + edad + " años.";
+    // Crear el mensaje de saludo completo
+    var mensaje = saludoGenero + ", " + nombre + ". " + mensajeEdad;
     
     // Mostrar el saludo en el párrafo con id "saludo"
     document.getElementById("saludo").innerText = mensaje;
