@@ -1,12 +1,28 @@
-<html>
-  <body>
-    <h1>HOLA COMO ESTAS</h1>    
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludo Personalizado</title>
+</head>
+<body>
+    <h1>HOLA, ¿CÓMO ESTÁS?</h1>    
 
-
-    <h1>Saludo Personalizado</h1>
+    <h2>Saludo Personalizado</h2>
     
     <label for="nombre">Introduce tu nombre:</label>
     <input type="text" id="nombre" placeholder="Tu nombre aquí">
+    
+    <br><br>
+
+    <label for="genero">Selecciona tu género:</label>
+    <select id="genero">
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+    </select>
+    
+    <br><br>
     
     <button onclick="saludar()">Saludar</button>
     
@@ -15,5 +31,5 @@
     <!-- Enlazar el archivo JavaScript -->
     <script src="saludo_nombre.js"></script>
 
-  </body>
+</body>
 </html>
